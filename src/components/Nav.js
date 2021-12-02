@@ -42,6 +42,7 @@ const Nav = () => {
     }
 
     return (
+      <div className="overall">
         <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
         <h1 className="pink azania py-2">Mage Wars</h1>
        
@@ -56,6 +57,7 @@ const Nav = () => {
           <div className="px-3 border-0 rounded-pill p-2 wallet white" onClick={connectWalletPressed}>Connect Wallet To Play</div>
             )}
         </div>
+    </div>
     </div>
     );
 }

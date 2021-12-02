@@ -29,4 +29,10 @@
 .main {
     align-items: center;
     margin-top: 2vh;
+    
+}
+
+.overall {
+    background-color: #0A1831;
+    height: 100vh;
 }
