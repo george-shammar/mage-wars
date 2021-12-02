@@ -53,7 +53,7 @@ const Nav = () => {
               String(walletAddress).substring(38)}
             </div>
             ) : (
-          <div className="text" onClick={connectWalletPressed}>Connect Wallet To Play</div>
+          <div className="px-3 border-0 rounded-pill p-2 wallet white" onClick={connectWalletPressed}>Connect Wallet To Play</div>
             )}
         </div>
     </div>
