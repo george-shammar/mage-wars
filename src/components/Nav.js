@@ -42,17 +42,17 @@ const Nav = () => {
 
     return (
         <div className="nav">
-        <h1 className="title">ZebraMint</h1>
+        <h1 className="title">Mage Wars</h1>
        
         <div className="wallet">
           {walletAddress.length > 0 ? (
-            <div className="text">Connected:   
+            <div className="text">Current Player:   
               {String(walletAddress).substring(0, 6) +
               "..." +
               String(walletAddress).substring(38)}
             </div>
             ) : (
-          <div className="text" onClick={connectWalletPressed}>Connect Wallet</div>
+          <div className="text" onClick={connectWalletPressed}>Connect Wallet To Play</div>
             )}
         </div>
     </div>
