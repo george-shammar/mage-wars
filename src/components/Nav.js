@@ -43,11 +43,11 @@ const Nav = () => {
 
     return (
         <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
-        <h1 className="pink azania py-5">Mage Wars</h1>
+        <h1 className="pink azania py-2">Mage Wars</h1>
        
         <div className="wallet">
           {walletAddress.length > 0 ? (
-            <div className="text">Current Player:   
+            <div className="px-3 border-0 rounded-pill p-2 wallet white">Current Player:   
               {String(walletAddress).substring(0, 6) +
               "..." +
               String(walletAddress).substring(38)}
