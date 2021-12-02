@@ -43,7 +43,7 @@ const Nav = () => {
 
     return (
         <div className="nav">
-        <h1 className="pink">Mage Wars</h1>
+        <h1 className="pink azania">Mage Wars</h1>
        
         <div className="wallet">
           {walletAddress.length > 0 ? (
