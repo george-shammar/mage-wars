@@ -42,7 +42,7 @@ const Nav = () => {
     }
 
     return (
-        <div className="nav">
+        <div className="d-flex justify-content-between align-text-center pt-2 px-4">
         <h1 className="pink azania">Mage Wars</h1>
        
         <div className="wallet">
