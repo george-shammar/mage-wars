@@ -42,8 +42,8 @@ const Nav = () => {
     }
 
     return (
-        <div className="d-flex justify-content-between align-text-center pt-2 px-4">
-        <h1 className="pink azania">Mage Wars</h1>
+        <div className="d-flex  main flex-column justify-content-between align-text-center pt-2 px-4">
+        <h1 className="pink azania py-5">Mage Wars</h1>
        
         <div className="wallet">
           {walletAddress.length > 0 ? (

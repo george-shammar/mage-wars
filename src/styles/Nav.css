@@ -27,4 +27,10 @@ a:hover {
 
 .wallet {
     background-color: #F14D5D;
+    
+}
+
+.main {
+    align-items: center;
+    margin-top: 60vh;
 }
