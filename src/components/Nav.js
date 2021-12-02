@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
+import "../styles/Nav.css"
 
 const Nav = () => {
     const [walletAddress, setWallet] = useState("");
@@ -42,7 +43,7 @@ const Nav = () => {
 
     return (
         <div className="nav">
-        <h1 className="title">Mage Wars</h1>
+        <h1 className="pink">Mage Wars</h1>
        
         <div className="wallet">
           {walletAddress.length > 0 ? (
