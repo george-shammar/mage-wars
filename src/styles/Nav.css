@@ -9,12 +9,8 @@
     font-family: 'Merienda', cursive;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-a:hover {
-    color: #F14D5D;
+.wallet:hover {
+    background-color: #25cfcf;
 }
 
 .white {
@@ -27,7 +23,7 @@ a:hover {
 
 .wallet {
     background-color: #F14D5D;
-    
+    cursor: pointer;
 }
 
 .main {
