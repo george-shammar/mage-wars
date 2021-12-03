@@ -29,12 +29,10 @@
 .main {
     align-items: center;
     margin-top: 2vh;
-    
 }
 
 .overall {
     background-color: #0A1831;
-    height: 100vh;
 }
 
 a:link {
@@ -46,5 +44,10 @@ a:link {
 }
 
 .mint {
-    width: 50%;
+    width: 20%;
+}
+
+.card {
+    height: 350px;
+    background-color: #0A1831;
 }

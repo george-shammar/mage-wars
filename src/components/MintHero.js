@@ -60,7 +60,7 @@ const Nav = () => {
     </div>
 
     <div className="mint">
-      <div className="py-5 form border rounded shadow-lg font my-5">
+      <div className="border card rounded shadow-lg mt-5">
         
       </div>
       <input placeholder="Name your Hero"></input>
