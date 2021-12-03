@@ -61,7 +61,7 @@ const Nav = () => {
 
     <div className="mint">
       <div className="border card rounded shadow-lg mt-5">
-        <i className="fas fa-question question"></i>
+       
       </div>
       <input placeholder="Name your Hero"></input>
       <div className="white">
