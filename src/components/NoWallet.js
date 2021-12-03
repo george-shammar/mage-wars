@@ -1,12 +1,13 @@
+import "../styles/Nav.css"
 
 export const NoWallet = () => {
     return (
-      <div>
-        <div className="nav">
-        <h1 className="title">Mage Wars</h1> 
-        <p className="no-wallet-desktop">No Ethereum wallet was detected. Connect to play Mage Wars.</p>
-          <div className="wallet">
-            <p className="text">
+      <div className="overall">
+        <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
+        <h1 className="pink azania py-2">Mage Wars</h1> 
+        <p className="white">No Ethereum wallet was detected. Connect to play Mage Wars.</p>
+          <div className="px-3 border-0 rounded-pill pt-2 wallet white">
+            <p className="white">
               Install{" "}
               <a
                 href="http://metamask.io"
