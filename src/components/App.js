@@ -1,10 +1,10 @@
 import React from 'react';
-import Nav from './Nav';
+import MintHero from './MintHero';
 
 const App = () => {
   return (
     <div>
-     <Nav />
+     <MintHero />
     </div>
   );
 }
