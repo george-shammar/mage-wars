@@ -76,6 +76,9 @@ const Nav = () => {
           </button>
       </div>
     
+    <div>
+      <p>Reveal minted Hero</p>
+    </div>
 
     </div>
     );

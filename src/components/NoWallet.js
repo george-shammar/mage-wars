@@ -2,7 +2,7 @@ import "../styles/MintHero.css"
 
 export const NoWallet = () => {
     return (
-      <div className="overall">
+      <div className="overall-nowallet">
         <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
         <h1 className="pink azania py-2">Mage Wars</h1> 
         <p className="white">No Ethereum wallet was detected. Connect to Metamask to play Mage Wars.</p>

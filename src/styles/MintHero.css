@@ -35,6 +35,11 @@
     background-color: #0A1831;
 }
 
+.overall-nowallet {
+    background-color: #0A1831;
+    height: 100vh;
+}
+
 a:link {
     text-decoration: none;
 }
