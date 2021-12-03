@@ -4,8 +4,8 @@ const RevealHero = () => {
         <div>
             <p>Hero goes here</p>
 
-            <div className="reveal">
-                <button className="white rounded my-5 reveal py-2 submit white">Play Now</button>
+            <div className="mint-reveal">
+                <button className="white rounded my-5 py-2 submit white">Play Now</button>
             </div>
            
         </div>
