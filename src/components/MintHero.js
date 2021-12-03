@@ -43,7 +43,7 @@ const Nav = () => {
     }
 
     return (
-      <div className="overall">
+      <div className="overall butt">
         <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
         <h1 className="pink azania py-2">Mage Wars</h1>
        
@@ -79,9 +79,12 @@ const Nav = () => {
       </div>
       
     
-    <div>
-      <p>Reveal minted Hero</p>
+
+    <div className="buttn">
+     <button className="white rounded my-5 reveal py-2 submit white">Reveal Hero</button>
     </div>
+      
+    
 
     </div>
     );

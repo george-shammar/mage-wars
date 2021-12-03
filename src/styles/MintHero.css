@@ -67,3 +67,13 @@ a:link {
     background-color: inherit;
     width: 100%;
 }
+
+.reveal {
+    margin: auto;
+    width: 20%;
+}
+
+.butt {
+    position: relative;
+}
+
