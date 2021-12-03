@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
+import { Link } from 'react-router-dom';
 import "../styles/MintHero.css"
 import question from "../assets/question.png";
 
@@ -80,9 +81,9 @@ const Nav = () => {
       
     
 
-    <div className="buttn">
-     <button className="white rounded my-5 reveal py-2 submit white">Reveal Hero</button>
-    </div>
+    
+     <Link to="/RevealHero"><button className="white rounded my-5 reveal py-2 submit white">Reveal Hero</button></Link>
+    
       
     
 
