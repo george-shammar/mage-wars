@@ -60,13 +60,16 @@ const Nav = () => {
     </div>
 
     <div className="mint">
-      <div className="py-5 form border rounded shadow-lg font mx-5 my-5">
+      <div className="py-5 form border rounded shadow-lg font my-5">
         
       </div>
       <input placeholder="Name your Hero"></input>
+      <div className="white">
         <p>DNA: To be revealed</p>
         <p>Rarity: To be revealed</p>
         <p>Description/Powers: To be reveealed</p>
+      </div>
+        
         <button className="mb-3 py-2 submit">
             Mint Hero
           </button>
