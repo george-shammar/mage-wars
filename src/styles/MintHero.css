@@ -56,3 +56,13 @@ a:link {
     height: 350px;
     background-color: #0A1831;
 }
+
+.submit {
+    background-color: #F14D5D;
+    width: 100%;
+}
+
+.name {
+    background-color: inherit;
+    width: 100%;
+}
