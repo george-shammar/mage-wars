@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
 import "../styles/MintHero.css"
+import question from "../assets/question.png";
 
 const Nav = () => {
     const [walletAddress, setWallet] = useState("");
@@ -61,7 +62,7 @@ const Nav = () => {
 
     <div className="mint">
       <div className="border card rounded shadow-lg mt-5">
-       
+        <img alt="logo" src={question} className="mx-2 my-2" />
       </div>
       <input placeholder="Name your Hero"></input>
       <div className="white">
