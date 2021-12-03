@@ -81,8 +81,10 @@ const Nav = () => {
       
     
 
-    
-     <Link to="/RevealHero"><button className="white rounded my-5 reveal py-2 submit white">Reveal Hero</button></Link>
+    <div className="mint">
+      <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
+    </div>
+     
     
       
     
