@@ -10,7 +10,7 @@ export const NoWallet = () => {
                 href="http://metamask.io"
                 target="_blank"
                 rel="noopener noreferrer"
-              > <div className="px-3 border-0 rounded-pill py-1 wallet white">
+              > <div className="px-3 border-0 rounded-pill pt-2 wallet pill white">
             <p className="white">
               Install{" "}
              
@@ -18,7 +18,6 @@ export const NoWallet = () => {
             </p>
           </div> </a>
         </div>
-        {/* <p className="no-wallet">No Ethereum wallet was detected.</p> */}
         </div>
     );
   }

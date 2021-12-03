@@ -36,3 +36,11 @@
     background-color: #0A1831;
     height: 100vh;
 }
+
+a:link {
+    text-decoration: none;
+}
+
+.pill {
+    padding-bottom: 0.1px;
+}
