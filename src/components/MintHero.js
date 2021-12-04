@@ -153,7 +153,7 @@ const MintHero = () => {
           <p>Description/Powers: To be reveealed</p>
         </div>
           
-          <button className="py-2 submit white" onClick={mintHero}>
+          <button className="py-2 submit white" onClick={mintMage}>
               Mint Hero
             </button>
         </div>
