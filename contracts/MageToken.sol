@@ -38,9 +38,9 @@ contract MageToken is ERC721, Ownable {
     COUNTER++;
   }
 
-  function createRandomMage(string memory _name) public payable {
+  function createRandomMage(string memory _name, string memory tokenURI) public payable {
     require(msg.value >= fee);
-    _createMage(_name);
+    _createMage(_name, tokenURI);
   }
 
   function updateFee(uint256 _fee) external onlyOwner {
