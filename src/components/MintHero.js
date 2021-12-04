@@ -54,7 +54,9 @@ const MintHero = () => {
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
 
-      let mintingPrice = await contract.getMintingPrice(no);
+      let mintingPrice = await contract.getMintingPrice();
+      mintingPrice = mintingPrice.toString();
+
 
     }
 
