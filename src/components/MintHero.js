@@ -16,6 +16,7 @@ const MintHero = () => {
     const [walletAddress, setWallet] = useState("");
     const [fileUrl, setFileUrl] = useState(null);
     const [formInput, updateFormInput] = useState({name:""});
+    const [status, setStatus] = useState("");
 
     useEffect(() => {
       (async() => {
@@ -77,7 +78,7 @@ const MintHero = () => {
               const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
 
               setStatus("Blockchain transaction sent, waiting confirmation...");
-              
+
               const receipt = await transaction.wait();
               if (receipt.status === 0) {
                   throw new Error("Transaction failed");
