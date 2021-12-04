@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 import { NFTStorage } from 'nft.storage';
 import contractAddress from "../contracts/contract-address.json";
 import MageArtifact from "../contracts/MageToken.json";
+require('dotenv').config();
 import "../styles/MintHero.css"
 import question from "../assets/question.png";
+
+const NFT_STORAGE_KEY = process.env.NFT_STORAGE_API_KEY 
 
 const MintHero = () => {
     const [walletAddress, setWallet] = useState("");
