@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import "../styles/MintHero.css"
 import question from "../assets/question.png";
 
-const Nav = () => {
+const MintHero = () => {
     const [walletAddress, setWallet] = useState("");
 
     useEffect(() => {
@@ -95,4 +95,4 @@ const Nav = () => {
     );
 }
 
-export default Nav;
+export default MintHero;
