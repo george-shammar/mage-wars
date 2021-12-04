@@ -46,9 +46,9 @@ const MintHero = () => {
     async function mintMage() {
       const {name} = formInput;
       if (!no) return
-      const data = JSON.stringify({
-        name: fileUrl
-      })
+      // const data = JSON.stringify({
+      //   name: fileUrl
+      // })
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
@@ -57,6 +57,34 @@ const MintHero = () => {
       let mintingPrice = await contract.getMintingPrice();
       mintingPrice = mintingPrice.toString();
 
+            try {
+              // const added = await client.add(data);
+              // const url = `https://ipfs.infura.io/ipfs/${added.path}`
+
+              const client = new NFTStorage({ token: NFT_STORAGE_KEY });
+              setStatus("Uploading to nft.storage...")
+              const metadata = await client.store({
+                name,
+                description,
+                image,
+              });
+              setStatus(`Upload complete! Minting token with metadata URI: ${metadata.url}`);
+
+              
+              
+              const transaction = await contract.createToken(url, no, { value: mintingPrice });
+              const receipt = await transaction.wait();
+              if (receipt.status === 0) {
+                  throw new Error("Transaction failed");
+              }
+            } catch (error) {
+              if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
+                return;
+              }
+              console.error(error);
+            } finally {
+
+            }
 
     }
 
