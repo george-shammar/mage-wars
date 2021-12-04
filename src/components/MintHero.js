@@ -72,9 +72,12 @@ const MintHero = () => {
               });
               setStatus(`Upload complete! Minting token with metadata URI: ${metadata.url}`);
 
-
+              const metadataURI = metadata.url;
               
               const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
+
+              setStatus("Blockchain transaction sent, waiting confirmation...");
+              
               const receipt = await transaction.wait();
               if (receipt.status === 0) {
                   throw new Error("Transaction failed");
