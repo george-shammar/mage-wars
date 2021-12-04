@@ -12,7 +12,7 @@ contract MageToken is ERC721, Ownable {
 
   uint256 COUNTER;
 
-  uint256 public fee = 0.01 ether;
+  uint256 fee = 0.01 ether;
 
   struct Mage {
     string name;
@@ -44,6 +44,10 @@ contract MageToken is ERC721, Ownable {
 
   function updateFee(uint256 _fee) external onlyOwner {
     fee = _fee;
+  }
+
+  function getMintingPrice() public view returns(uint256) {
+      return fee;
   }
 
   function withdraw() external payable onlyOwner {
