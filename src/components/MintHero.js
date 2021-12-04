@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
 import { Link } from 'react-router-dom';
+import { NFTStorage } from 'nft.storage';
 import contractAddress from "../contracts/contract-address.json";
 import MageArtifact from "../contracts/MageToken.json";
 import "../styles/MintHero.css"
@@ -58,8 +59,6 @@ const MintHero = () => {
       mintingPrice = mintingPrice.toString();
 
             try {
-              // const added = await client.add(data);
-              // const url = `https://ipfs.infura.io/ipfs/${added.path}`
 
               const client = new NFTStorage({ token: NFT_STORAGE_KEY });
               setStatus("Uploading to nft.storage...")
@@ -70,7 +69,7 @@ const MintHero = () => {
               });
               setStatus(`Upload complete! Minting token with metadata URI: ${metadata.url}`);
 
-              
+
               
               const transaction = await contract.createToken(url, no, { value: mintingPrice });
               const receipt = await transaction.wait();
