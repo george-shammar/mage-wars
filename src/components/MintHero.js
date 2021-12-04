@@ -68,8 +68,10 @@ const Nav = () => {
       <div className="border">
         <input className="name py-1 white" placeholder="Name your Hero"></input>
         <div className="white mt-3">
+          <p>ID: To be revealed</p>
           <p>DNA: To be revealed</p>
           <p>Rarity: To be revealed</p>
+          <p>Level: To be revealed</p>
           <p>Description/Powers: To be reveealed</p>
         </div>
           
