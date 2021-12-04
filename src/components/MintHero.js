@@ -139,7 +139,12 @@ const MintHero = () => {
         <img alt="logo" src={question} className="mx-2 my-2" />
       </div>
       <div className="border">
-        <input className="name py-1 white" placeholder="Name your Hero" />
+        <input 
+          className="name py-1 white" 
+          placeholder="Name your Hero"
+          required
+          onChange={e => updateFormInput({...formInput, name: e.target.value})}  
+        />
         <div className="white mt-3">
           <p>ID: To be revealed</p>
           <p>DNA: To be revealed</p>
