@@ -12,7 +12,7 @@ contract MageToken is ERC721, Ownable {
 
   uint256 COUNTER;
 
-  uint256 fee = 0.01 ether;
+  uint256 public fee = 0.01 ether;
 
   struct Mage {
     string name;

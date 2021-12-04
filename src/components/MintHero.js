@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react";
+import { ethers } from "ethers";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
 import { Link } from 'react-router-dom';
+import contractAddress from "../contracts/contract-address.json";
+import MageArtifact from "../contracts/MageToken.json";
 import "../styles/MintHero.css"
 import question from "../assets/question.png";
 
 const MintHero = () => {
     const [walletAddress, setWallet] = useState("");
+    const [fileUrl, setFileUrl] = useState(null);
+    const [formInput, updateFormInput] = useState({name:""});
 
     useEffect(() => {
       (async() => {
@@ -37,6 +42,41 @@ const MintHero = () => {
         });
         } 
     }
+
+    async function mintMage() {
+      const {name} = formInput;
+      if (!no) return
+      const data = JSON.stringify({
+        name: fileUrl
+      })
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
+
+      let mintingPrice = await contract.getMintingPrice(no);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // If window.ethereum has not been injected.
     if (window.ethereum === undefined) {
