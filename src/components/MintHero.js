@@ -50,10 +50,7 @@ const MintHero = () => {
 
     async function mintMage() {
       const {name} = formInput;
-      if (!no) return
-      // const data = JSON.stringify({
-      //   name: fileUrl
-      // })
+      if (!name) return
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
@@ -71,13 +68,13 @@ const MintHero = () => {
                 description,
                 image,
               });
-              setStatus(`Upload complete! Minting token with metadata URI: ${metadata.url}`);
+              setStatus(`Minting token with metadata URI: ${metadata.url}`);
 
               const metadataURI = metadata.url;
               
               const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
 
-              setStatus("Blockchain transaction sent, waiting confirmation...");
+              setStatus("Blockchain transaction sent, awaiting confirmation...");
 
               const receipt = await transaction.wait();
               if (receipt.status === 0) {
@@ -142,7 +139,7 @@ const MintHero = () => {
         <img alt="logo" src={question} className="mx-2 my-2" />
       </div>
       <div className="border">
-        <input className="name py-1 white" placeholder="Name your Hero"></input>
+        <input className="name py-1 white" placeholder="Name your Hero" />
         <div className="white mt-3">
           <p>ID: To be revealed</p>
           <p>DNA: To be revealed</p>
