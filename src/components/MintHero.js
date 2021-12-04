@@ -74,7 +74,7 @@ const MintHero = () => {
 
 
               
-              const transaction = await contract.createToken(url, no, { value: mintingPrice });
+              const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
               const receipt = await transaction.wait();
               if (receipt.status === 0) {
                   throw new Error("Transaction failed");

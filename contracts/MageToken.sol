@@ -27,12 +27,13 @@ contract MageToken is ERC721, Ownable {
   event NewMage(address indexed owner, uint256 id, uint256 dna);
 
   // Creation
-  function _createMage(string memory _name) internal {
+  function _createMage(string memory _name, string memory tokenURI) internal {
     uint8 randRarity = uint8(_createRandomNum(100));
     uint256 randDna = _createRandomNum(10**16);
     Mage memory newMage = Mage(_name, COUNTER, randDna, 1, randRarity);
     mages.push(newMage);
     _safeMint(msg.sender, COUNTER);
+    _setTokenURI(COUNTER, tokenURI);
     emit NewMage(msg.sender, COUNTER, randDna);
     COUNTER++;
   }
