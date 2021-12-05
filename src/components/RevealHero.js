@@ -1,5 +1,5 @@
 import "../styles/RevealHero.css"
-import mage from "../assets/question.png";
+import mage from "../assets/dude.jpeg";
 
 
 const RevealHero = () => {
