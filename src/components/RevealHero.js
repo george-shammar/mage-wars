@@ -6,6 +6,7 @@ import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import contractAddress from "../contracts/contract-address.json";
 import MageArtifact from "../contracts/MageToken.json";
 
+const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 const RevealHero = () => {
     const [walletAddress, setWallet] = useState("");
@@ -55,24 +56,40 @@ const RevealHero = () => {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
-
-        const data = await contract.getMages()
+        try {
+        const transaction = await contract.getMages();
+        const data = await transaction.wait();
         console.log(data)
-      
-        const items = await Promise.all(data.map(async i => {
-            let item = {
-              name: i.name,
-              ID: i.id,
-              DNA: i.dna,
-              rarity: i.rarity
-            }
-            console.log(item)
-            return item
-          }))
-          setNfts(items)
-          setStatus('loaded')
+        if (data.status === 0) {
+          throw new Error("Transaction failed");
+        }else {
+          setStatus("loaded");
+        }
+      } catch (error) {
+        if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
+          return;
+        }
+        console.error(error);
+      } finally {
 
-          console.log(items)
+      }
+        // const data = await contract.getMages()
+        // console.log(data)
+      
+        // const items = await Promise.all(data.map(async i => {
+        //     let item = {
+        //       name: i.name,
+        //       ID: i.id,
+        //       DNA: i.dna,
+        //       rarity: i.rarity
+        //     }
+        //     console.log(item)
+        //     return item
+        //   }))
+          // setNfts(items)
+          // setStatus('loaded')
+
+          // console.log(items)
           console.log("break")
 
 

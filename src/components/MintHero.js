@@ -98,6 +98,8 @@ const MintHero = () => {
       return <NoWallet />;
     }
 
+
+
     return (
       <div className="overall butt">
         <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
@@ -115,8 +117,7 @@ const MintHero = () => {
             )}
         </div>
       </div>
-
-        <p className="white py-2 status">
+      <p className="white py-2 status">
           {status}
         </p>
 
@@ -145,11 +146,14 @@ const MintHero = () => {
         </div>
 
       </div>
-      
-    
-
     <div className="mint">
-      <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
+    <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
+    
+        {/* {{status} === ("Fresh Mage minted successfully! Reveal your Mage with the button below to start the game") ? (
+          <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
+        ) : (
+            <p className="py-3">Reveal your NFT here after minting......</p>
+        )} */}
     </div>
      
     
