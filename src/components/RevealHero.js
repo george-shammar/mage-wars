@@ -12,7 +12,7 @@ const RevealHero = () => {
 
             <div className="mint">
                 <div className="border card rounded shadow-lg mt-3">
-                    <img alt="logo" src={mage} className="dude"/>
+                    <img alt="logo" src={mage} />
                 </div>
                 <div className="border">
                     <p>Name</p>
