@@ -81,21 +81,6 @@ const RevealHero = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     return (
         <div className="overall butt">
