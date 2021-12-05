@@ -91,7 +91,6 @@ const MintHero = () => {
             } finally {
 
             }
-           
     }
 
     // If window.ethereum has not been injected.
