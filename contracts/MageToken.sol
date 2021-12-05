@@ -34,21 +34,12 @@ contract MageToken is ERC721URIStorage, Pausable, Ownable {
     uint8 randRarity = uint8(_createRandomNum(100));
     uint256 randDna = _createRandomNum(10**16);
     Mage memory newMage = Mage(_name, COUNTER, randDna, 1, randRarity);
-    _setTokenURI(new, tokenURI);
+    _setTokenURI(newMage, tokenURI);
     mages.push(newMage);
     _safeMint(msg.sender, COUNTER);
     _setTokenURI(COUNTER, tokenURI);
     emit NewMage(msg.sender, COUNTER, randDna);
     COUNTER++;
-
-
-    
-            uint256 newItemId = _tokenIds.current();
-            
-          
-            _setTokenURI(newItemId, uniqueURI);
-            _tokenIds.increment();
-        
 
 
 

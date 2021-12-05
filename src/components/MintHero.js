@@ -69,11 +69,6 @@ const MintHero = () => {
                 image: new File(['./assets/question.png'], 'question.png', { type: 'image/jpg' })
               });
 
-<<<<<<< HEAD
-              const metadataURI = metadata.url;
-              
-              const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
-=======
               setStatus(`Minting token with metadata URI: ${metadata.url}`);
 
               const metadataURI = metadata.url;
@@ -82,7 +77,6 @@ const MintHero = () => {
 
               setStatus("Blockchain transaction sent, awaiting confirmation...");
 
->>>>>>> 5bcb3ea17eead26b10e54d9255c8c74ca3d3d9a6
               const receipt = await transaction.wait();
               if (receipt.status === 0) {
                   throw new Error("Transaction failed");
