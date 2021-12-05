@@ -1,7 +1,6 @@
 {
   "name": "mage-battle",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

@@ -135,8 +135,8 @@ const MintHero = () => {
     </div>
 
     <div className="mint">
-      <div className="border card rounded shadow-lg mt-5">
-        <img alt="logo" src={question} className="mx-2 my-2" />
+      <div className="border card rounded shadow-lg mt-3">
+        <img alt="logo" src={question} className="unknown"/>
       </div>
       <div className="border">
         <input 
