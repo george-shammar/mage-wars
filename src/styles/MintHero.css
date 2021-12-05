@@ -58,6 +58,10 @@ a:link {
     background-color: #0A1831;
 }
 
+.unknown {
+    height: 300px;
+}
+
 .submit {
     background-color: #F14D5D;
     width: 100%;

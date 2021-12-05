@@ -4,15 +4,18 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
 
-contract MageToken is ERC721, Ownable {
-  constructor(string memory _name, string memory _symbol)
-    ERC721(_name, _symbol)
-  {}
+contract MageToken is ERC721URIStorage, Pausable, Ownable {
+
+    constructor()ERC721("Mage", "MGE"){
+
+    }
 
   uint256 COUNTER;
 
-  uint256 fee = 0.01 ether;
+  uint256 private _price = 500000000000000;
 
   struct Mage {
     string name;
@@ -34,6 +37,7 @@ contract MageToken is ERC721, Ownable {
     _setTokenURI(new, tokenURI);
     mages.push(newMage);
     _safeMint(msg.sender, COUNTER);
+    _setTokenURI(COUNTER, tokenURI);
     emit NewMage(msg.sender, COUNTER, randDna);
     COUNTER++;
 
@@ -52,17 +56,17 @@ contract MageToken is ERC721, Ownable {
 
   }
 
-  function createRandomMage(string memory _name, string memory tokenURI) public payable {
-    require(msg.value >= fee);
+  function createRandomMage(string memory _name, string memory tokenURI) public payable whenNotPaused {
+    require(msg.value >= _price);
     _createMage(_name, tokenURI);
   }
 
   function updateFee(uint256 _fee) external onlyOwner {
-    fee = _fee;
+    _price = _fee;
   }
 
-  function getMintingPrice() public view returns(uint256) {
-      return fee;
+  function getMintingPrice() public view returns (uint256) {
+        return _price;
   }
 
   function withdraw() external payable onlyOwner {
@@ -100,5 +104,13 @@ contract MageToken is ERC721, Ownable {
       keccak256(abi.encodePacked(block.timestamp, msg.sender))
     );
     return randomNum % _mod;
+  }
+
+  function pause() public onlyOwner {
+        _pause();
+    }
+
+  function unpause() public onlyOwner {
+        _unpause();
   }
 }

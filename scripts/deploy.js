@@ -6,7 +6,7 @@ async function main() {
     console.log("Account balance:", (await deployer.getBalance()).toString());
   
     const MageToken = await ethers.getContractFactory("MageToken");
-    const mageToken = await MageToken.deploy("Mage", "MGT");
+    const mageToken = await MageToken.deploy();
   
     console.log("MageToken address:", mageToken.address);
 
