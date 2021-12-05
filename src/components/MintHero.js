@@ -81,7 +81,7 @@ const MintHero = () => {
               if (receipt.status === 0) {
                   throw new Error("Transaction failed");
               } else {
-                setStatus("Fresh Mage has been minted successfully. Reveal your Mage with the button below to start the game");
+                setStatus("Fresh Mage minted successfully! Reveal your Mage with the button below to start the game");
               }
             } catch (error) {
               if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
