@@ -109,11 +109,11 @@ const RevealHero = () => {
                 <div className="border">
                     <p>Name</p>
                     <div className="white mt-3">
-                    <p>ID: To be revealed</p>
-                    <p>DNA: To be revealed</p>
-                    <p>Rarity: To be revealed</p>
-                    <p>Level: To be revealed</p>
-                    <p>Description/Powers: To be reveealed</p>
+                    <p>ID: 2</p>
+                    <p>DNA: 6565676576567565</p>
+                    <p>Rarity: Original</p>
+                    <p>Level: 1</p>
+                    <p>Description: Max Velocity - 25m/h, Max Jump-height - 70%vh</p>
                     </div>
                 </div>
             </div>
