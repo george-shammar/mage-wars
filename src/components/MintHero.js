@@ -113,7 +113,7 @@ const MintHero = () => {
           <div className="px-3 border-0 rounded-pill p-2 wallet white" onClick={connectWalletPressed}>Connect Wallet To Play</div>
             )}
         </div>
-    </div>
+      </div>
 
     <div className="mint">
       <div className="border card rounded shadow-lg mt-3">
@@ -135,7 +135,7 @@ const MintHero = () => {
         </div>
           
           <button className="py-2 submit white" onClick={mintMage}>
-              Mint Hero
+              Mint Mage
             </button>
 
           

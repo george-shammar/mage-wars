@@ -1,8 +1,15 @@
 import "../styles/RevealHero.css"
 import mage from "../assets/question.png";
+
+
 const RevealHero = () => {
     return (
         <div>
+            <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
+                <h1 className="pink azania py-2">Your Minted Mage</h1>
+            </div>
+
+
             <div className="mint">
                 <div className="border card rounded shadow-lg mt-3">
                     <img alt="logo" src={mage} className="unknown"/>
@@ -17,7 +24,7 @@ const RevealHero = () => {
                     <p>Description/Powers: To be reveealed</p>
                     </div>
                 </div>
-      </div>
+            </div>
 
             <div className="mint-reveal">
                 <a href="https://george-shammar.github.io/Legend_of_the_Seeker/"><button className="white rounded my-5 py-2 submit white">Play Now</button></a>
