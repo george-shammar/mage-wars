@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import dragon from "../assets/dragoni.png"
+import dragon from "../assets/angry.png"
 import "../styles/Home.css"
 
 const Home = () => {
