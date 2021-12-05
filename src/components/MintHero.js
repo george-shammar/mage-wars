@@ -63,10 +63,11 @@ const MintHero = () => {
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
 
-      // let mintingPrice = await contract.getMintingPrice();
+      // let mintingPrice = await contract.getMintingPrice(2);
       // mintingPrice = mintingPrice.toString();
-      const mintingPrice = 100000;
-
+   
+      const mintingPrice = 500000000000000;
+      console.log(mintingPrice);
 
             try {
               const added = await client.add(data);
@@ -100,7 +101,7 @@ const MintHero = () => {
             } finally {
 
             }
-            console.log("breakpoint");
+           
     }
 
 
