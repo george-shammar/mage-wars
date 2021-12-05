@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
 import { Link } from 'react-router-dom';
-import { NFTStorage } from 'nft.storage';
+import { NFTStorage, File } from 'nft.storage'
 import contractAddress from "../contracts/contract-address.json";
 import MageArtifact from "../contracts/MageToken.json";
 require('dotenv').config();
@@ -14,7 +14,6 @@ const NFT_STORAGE_KEY = process.env.NFT_STORAGE_API_KEY
 
 const MintHero = () => {
     const [walletAddress, setWallet] = useState("");
-    const [fileUrl, setFileUrl] = useState(null);
     const [formInput, updateFormInput] = useState({name:""});
     const [status, setStatus] = useState("");
 
@@ -65,8 +64,8 @@ const MintHero = () => {
               setStatus("Uploading to nft.storage...")
               const metadata = await client.store({
                 name,
-                description,
-                image,
+                description: "Mage Warrior",
+                image: new File(['./assets/question.png'], 'question.png', { type: 'image/jpg' })
               });
               setStatus(`Minting token with metadata URI: ${metadata.url}`);
 
@@ -157,7 +156,7 @@ const MintHero = () => {
               Mint Hero
             </button>
 
-            <p {setStatus}></p>
+          
         </div>
       </div>
       
