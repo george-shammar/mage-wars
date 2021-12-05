@@ -8,9 +8,9 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
 contract MageToken is ERC721URIStorage, Pausable, Ownable {
-  constructor(string memory _name, string memory _symbol)
-    ERC721(_name, _symbol)
-  {}
+    constructor()ERC721("Mage", "MGE"){
+
+    }
 
   uint256 COUNTER;
 
