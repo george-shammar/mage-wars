@@ -3,6 +3,9 @@ import mage from "../assets/dude.jpeg";
 
 
 const RevealHero = () => {
+
+
+    
     return (
         <div className="overall butt">
             <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
