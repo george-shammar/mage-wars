@@ -12,9 +12,9 @@ const RevealHero = () => {
     const [status, setStatus] = useState("Not yet loaded");
     const [nfts, setNfts] = useState([])
 
-      useEffect(() => {
-        loadNFTs()
-      }, [])
+      // useEffect(() => {
+      //   loadNFTs()
+      // }, [])
 
 
     // useEffect(() => {
@@ -51,33 +51,33 @@ const RevealHero = () => {
     
 
 
-      async function loadNFTs() {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
+      // async function loadNFTs() {
+      //   const provider = new ethers.providers.Web3Provider(window.ethereum);
+      //   const signer = provider.getSigner();
+      //   const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
 
-        const data = await contract.getMages()
-        console.log(data)
+      //   const data = await contract.getMages()
+      //   console.log(data)
       
-        const items = await Promise.all(data.map(async i => {
-            let item = {
-              name: i.name,
-              ID: i.id,
-              DNA: i.dna,
-              rarity: i.rarity
-            }
-            console.log(item)
-            return item
-          }))
-          setNfts(items)
-          setStatus('loaded')
+      //   const items = await Promise.all(data.map(async i => {
+      //       let item = {
+      //         name: i.name,
+      //         ID: i.id,
+      //         DNA: i.dna,
+      //         rarity: i.rarity
+      //       }
+      //       console.log(item)
+      //       return item
+      //     }))
+      //     setNfts(items)
+      //     setStatus('loaded')
 
-          console.log(items)
-          console.log("break")
+      //     console.log(items)
+      //     console.log("break")
 
 
 
-      }
+      // }
 
 
 
@@ -104,10 +104,10 @@ const RevealHero = () => {
             </div>
             <div className="mint">
                 <div className="border card rounded shadow-lg mt-3">
-                    <img alt="logo" src={mage} />
+                    <img alt="logo" src={mage} className="image"/>
                 </div>
                 <div className="border">
-                    <p>Name</p>
+                    <p className="white">Name: zorra</p>
                     <div className="white mt-3">
                     <p>ID: 2</p>
                     <p>DNA: 6565676576567565</p>
