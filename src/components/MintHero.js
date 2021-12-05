@@ -10,8 +10,8 @@ import "../styles/MintHero.css"
 import question from "../assets/question.png";
 require('dotenv').config();
 
-const NFT_STORAGE_KEY = process.env.NFT_STORAGE_API_KEY
-// const NFT_STORAGE_KEY = 
+// const NFT_STORAGE_KEY = process.env.NFT_STORAGE_API_KEY
+const NFT_STORAGE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDMyNTlEMWEzNTNEMzgyNjQ4MDVmNkY4Y2NjMTY0RThFODQzM0I0MDYiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTYzNzkzOTM1Njc5NywibmFtZSI6IkF6YW5pYSJ9.Tn3kou1OKA09gdsp0pduKzFUJGAVQ8KXk1-44pLWH9w";
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 const MintHero = () => {
@@ -80,6 +80,8 @@ const MintHero = () => {
               const receipt = await transaction.wait();
               if (receipt.status === 0) {
                   throw new Error("Transaction failed");
+              } else {
+                setStatus("Fresh Mage minted successfully! Reveal your Mage with the button below to start the game");
               }
             } catch (error) {
               if (error.code === ERROR_CODE_TX_REJECTED_BY_USER) {
@@ -89,7 +91,6 @@ const MintHero = () => {
             } finally {
 
             }
-           
     }
 
     // If window.ethereum has not been injected.
@@ -115,6 +116,10 @@ const MintHero = () => {
         </div>
       </div>
 
+        <p className="white py-2 status">
+          {status}
+        </p>
+
     <div className="mint">
       <div className="border card rounded shadow-lg mt-3">
         <img alt="logo" src={question} className="unknown"/>
@@ -137,9 +142,8 @@ const MintHero = () => {
           <button className="py-2 submit white" onClick={mintMage}>
               Mint Mage
             </button>
-
-          
         </div>
+
       </div>
       
     
