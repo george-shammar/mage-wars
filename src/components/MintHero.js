@@ -156,6 +156,8 @@ const MintHero = () => {
           <button className="py-2 submit white" onClick={mintMage}>
               Mint Hero
             </button>
+
+            <p {setStatus}></p>
         </div>
       </div>
       

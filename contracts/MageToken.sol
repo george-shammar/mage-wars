@@ -4,8 +4,10 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/security/Pausable.sol";
 
-contract MageToken is ERC721, Ownable {
+contract MageToken is ERC721URIStorage, Pausable, Ownable {
   constructor(string memory _name, string memory _symbol)
     ERC721(_name, _symbol)
   {}
@@ -38,7 +40,7 @@ contract MageToken is ERC721, Ownable {
     COUNTER++;
   }
 
-  function createRandomMage(string memory _name, string memory tokenURI) public payable {
+  function createRandomMage(string memory _name, string memory tokenURI) public payable whenNotPaused {
     require(msg.value >= fee);
     _createMage(_name, tokenURI);
   }
@@ -86,5 +88,13 @@ contract MageToken is ERC721, Ownable {
       keccak256(abi.encodePacked(block.timestamp, msg.sender))
     );
     return randomNum % _mod;
+  }
+
+  function pause() public onlyOwner {
+        _pause();
+    }
+
+  function unpause() public onlyOwner {
+        _unpause();
   }
 }
