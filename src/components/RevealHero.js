@@ -1,18 +1,14 @@
 import "../styles/RevealHero.css"
+import mage from "../assets/question.png";
 const RevealHero = () => {
     return (
         <div>
             <div className="mint">
                 <div className="border card rounded shadow-lg mt-3">
-                    <img alt="logo" src={question} className="unknown"/>
+                    <img alt="logo" src={mage} className="unknown"/>
                 </div>
                 <div className="border">
-                    <input 
-                    className="name py-1 white" 
-                    placeholder="Name your Hero"
-                    required
-                    onChange={e => updateFormInput({...formInput, name: e.target.value})}  
-                    />
+                    <p>Name</p>
                     <div className="white mt-3">
                     <p>ID: To be revealed</p>
                     <p>DNA: To be revealed</p>
