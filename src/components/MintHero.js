@@ -92,26 +92,6 @@ const MintHero = () => {
            
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // If window.ethereum has not been injected.
     if (window.ethereum === undefined) {
       return <NoWallet />;
