@@ -1,37 +1,14 @@
 require("@nomiclabs/hardhat-waffle");
-// const privateKey = 
-// const infuraId = 
-
+ 
+const ALCHEMY_API_KEY = "KEY"
+const MATIC_PRIVATE_KEY = "YOUR ROPSTEN PRIVATE KEY"
 
 module.exports = {
-  defaultNetwork: "hardhat",
+  solidity: "0.8.4",
   networks: {
-    hardhat: {
-      chainId: 1337
-    },
-    /*
-    mumbai: {
-      // Infura
-      // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
-      url: "https://rpc-mumbai.matic.today",
-      accounts: [privateKey]
-    },
-    matic: {
-      // Infura
-      // url: `https://polygon-mainnet.infura.io/v3/${infuraId}`,
-      url: "https://rpc-mainnet.maticvigil.com",
-      accounts: [privateKey]
-    }
-    */
-  },
-  solidity: {
-    version: "0.8.4",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200
-      }
+    ropsten: {
+      url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
+      accounts: [`${MATIC_PRIVATE_KEY}`]
     }
   }
 };
-
