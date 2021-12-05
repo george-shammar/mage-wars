@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import { NoWallet } from "./NoWallet";
 import { Link } from 'react-router-dom';
-import { create as ipfsHttpClient } from "ipfs-http-client";
+// import { create as ipfsHttpClient } from "ipfs-http-client";
 import { NFTStorage, File } from 'nft.storage'
 import contractAddress from "../contracts/contract-address.json";
 import MageArtifact from "../contracts/MageToken.json";
@@ -11,9 +11,11 @@ import "../styles/MintHero.css"
 import question from "../assets/question.png";
 require('dotenv').config();
 
-const NFT_STORAGE_KEY = process.env.NFT_STORAGE_API_KEY 
+const NFT_STORAGE_KEY = process.env.NFT_STORAGE_API_KEY
+// const NFT_STORAGE_KEY = 
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
+
+// const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
 const MintHero = () => {
     const [walletAddress, setWallet] = useState("");
@@ -53,11 +55,11 @@ const MintHero = () => {
     async function mintMage() {
       const {name} = formInput;
       if (!name) return
-      const data = JSON.stringify({
-        name, 
-        description:"dfhdsgfdkfkdjfh", 
-        image: './assets/question.png'
-     })
+    //   const data = JSON.stringify({
+    //     name, 
+    //     description:"dfhdsgfdkfkdjfh", 
+    //     image: './assets/question.png'
+    //  })
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
@@ -67,23 +69,22 @@ const MintHero = () => {
       // mintingPrice = mintingPrice.toString();
    
       const mintingPrice = 500000000000000;
-      console.log(mintingPrice);
 
             try {
-              const added = await client.add(data);
-            const url = `https://ipfs.infura.io/ipfs/${added.path}`
+            //   const added = await client.add(data);
+            // const url = `https://ipfs.infura.io/ipfs/${added.path}`
 
-              // const client = new NFTStorage({ token: NFT_STORAGE_KEY });
-              // setStatus("Uploading to nft.storage...")
-              // const metadata = await client.store({
-              //   name,
-              //   description: "Mage Warrior",
-              //   image: new File(['./assets/question.png'], 'question.png', { type: 'image/jpg' })
-              // });
-              // setStatus(`Minting token with metadata URI: ${metadata.url}`);
-
-              // const metadataURI = metadata.url;
-              const metadataURI = url;
+              const client = new NFTStorage({ token: NFT_STORAGE_KEY });
+              setStatus("Uploading to nft.storage...")
+              const metadata = await client.store({
+                name,
+                description: "Mage Warrior",
+                image: new File(['./assets/question.png'], 'question.png', { type: 'image/jpg' })
+              });
+              setStatus(`Minting token with metadata URI: ${metadata.url}`);
+              console.log(metadata.url);
+              const metadataURI = metadata.url;
+              // const metadataURI = url;
               
               const transaction = await contract.createRandomMage(name, metadataURI, { value: mintingPrice });
 
