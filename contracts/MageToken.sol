@@ -41,10 +41,6 @@ contract MageToken is ERC721URIStorage, Pausable, Ownable {
     emit NewMage(msg.sender, COUNTER, randDna);
     COUNTER++;
 
-
-
-
-
   }
 
   function createRandomMage(string memory _name, string memory tokenURI) public payable whenNotPaused {
@@ -80,13 +76,6 @@ contract MageToken is ERC721URIStorage, Pausable, Ownable {
       }
     }
     return result;
-  }
-
-  // Actions
-  function levelUp(uint256 _mageId) public {
-    require(ownerOf(_mageId) == msg.sender);
-    Mage storage mage = mages[_mageId];
-    mage.level++;
   }
 
   // Helpers
