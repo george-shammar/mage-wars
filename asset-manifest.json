@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mage-wars/static/css/main.1be3e85a.chunk.css",
+    "main.js": "/mage-wars/static/js/main.c45970e9.chunk.js",
+    "main.js.map": "/mage-wars/static/js/main.c45970e9.chunk.js.map",
+    "runtime-main.js": "/mage-wars/static/js/runtime-main.25e40e48.js",
+    "runtime-main.js.map": "/mage-wars/static/js/runtime-main.25e40e48.js.map",
+    "static/js/2.0e991e7d.chunk.js": "/mage-wars/static/js/2.0e991e7d.chunk.js",
+    "static/js/2.0e991e7d.chunk.js.map": "/mage-wars/static/js/2.0e991e7d.chunk.js.map",
+    "index.html": "/mage-wars/index.html",
+    "static/css/main.1be3e85a.chunk.css.map": "/mage-wars/static/css/main.1be3e85a.chunk.css.map",
+    "static/js/2.0e991e7d.chunk.js.LICENSE.txt": "/mage-wars/static/js/2.0e991e7d.chunk.js.LICENSE.txt",
+    "static/media/angry.65de911d.png": "/mage-wars/static/media/angry.65de911d.png",
+    "static/media/question.4e272812.png": "/mage-wars/static/media/question.4e272812.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.25e40e48.js",
+    "static/js/2.0e991e7d.chunk.js",
+    "static/css/main.1be3e85a.chunk.css",
+    "static/js/main.c45970e9.chunk.js"
+  ]
+}
