@@ -4,7 +4,7 @@ import mage from "../assets/question.png";
 
 const RevealHero = () => {
     return (
-        <div>
+        <div className="overall butt">
             <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
                 <h1 className="pink azania py-2">Your Minted Mage</h1>
             </div>
