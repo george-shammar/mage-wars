@@ -11,7 +11,7 @@ const Home = () => {
                 <Link to="/MintHero"><button className="px-3 border-0 rounded-pill p-2 wallet white">Mint A Hero To Play</button></Link>
              
             </div>
-            <img alt="dragon"  src={dragon}/>
+            <img alt="dragon"  src={dragon} className="dragon "/>
         </div>
     )
 }
