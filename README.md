@@ -8,7 +8,7 @@
 - Description: The forward and backward velocity as well as maximum jump height.
 
 ## Video Demo
-[Watch Here](hhttps://www.loom.com/share/6d36bfb0b91c47d7947eea6a565a910b/)
+[Watch Here](https://www.loom.com/share/6d36bfb0b91c47d7947eea6a565a910b)
 
 ## Tech Stack
 
