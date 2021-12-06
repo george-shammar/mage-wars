@@ -13,10 +13,22 @@
 
 ```
 const client = new NFTStorage({ token: NFT_STORAGE_KEY });
-  setStatus("Uploading to nft.storage...")
   const metadata = await client.store({
     name,
     description: "Some texts",
     image: new File(['./assets/example.png'], 'question.png', { type: 'image/jpg' })
   });
 ```
+The smartcontract is deployed to the ### Polygon Mumbai network
+
+# Built With
+- Solidity
+- React
+- JavaScript
+- IPFS/Filecoin
+- Hardhat
+- Ethers
+- Polygon
+- Alchemy
+- HTML5
+- CSS3
