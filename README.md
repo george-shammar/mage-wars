@@ -6,3 +6,8 @@
 - Rarity: Ranges from "Original", "Rare" and "Super Rare"
 - Level: Initial level is set to 1.
 - Description: The forward and backward velocity as well as maximum jump height.
+
+#### Tech Stack
+
+##### Minted NFTs are stored on IPFS for hot storage and Filecoin for cold storage using the nft.storage library. Example code snippet below:
+
