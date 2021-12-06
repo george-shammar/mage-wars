@@ -46,6 +46,8 @@ The smartcontract is deployed to the ### Polygon Mumbai network
 
 ## Getting Started
 
+#### Note: The application is deployed on Polygon testnet but the information below is to allow you to run a local network using Hardhat.
+
 To run a local copy of this application, follow the steps below:
 
 - Go to the "Code" section of this repository and press the green button that says "Code". Copy the URL or the SSH key.
