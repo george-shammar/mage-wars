@@ -61,7 +61,6 @@ const MintHero = () => {
       const mintingPrice = await contract.getMintingPrice();
       
             try {
-
               const client = new NFTStorage({ token: NFT_STORAGE_KEY });
               setStatus("Uploading to nft.storage...")
               const metadata = await client.store({
@@ -140,7 +139,6 @@ const MintHero = () => {
           <p>Level: To be revealed</p>
           <p>Description/Powers: To be reveealed</p>
         </div>
-          
           <button className="py-2 submit white" onClick={mintMage}>
               Mint Mage
             </button>
@@ -154,11 +152,6 @@ const MintHero = () => {
       <p className="white py-3">Reveal your Mage here after confirmation... </p>
     )}
     </div>
-     
-    
-      
-    
-
     </div>
     );
 }
