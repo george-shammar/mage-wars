@@ -38,3 +38,8 @@ The smartcontract is deployed to the ### Polygon Mumbai network
 
 ## Screenshots
 
+#### World Scene
+![screenshot](./world.png)
+
+#### Battle Scene
+![screenshot](./battle.png)
