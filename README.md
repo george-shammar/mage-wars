@@ -53,3 +53,18 @@ To run a local copy of this application, follow the steps below:
 ```
 https://github.com/george-shammar/mage-wars.git
 ```
+The URL or SSH are the links copied from the step above.
+
+- If you don't have git installed, you can download this project and unzip it.
+- Change directory into the folder the application is saved.
+```
+cd directory
+```
+Directory is the name of your folder.
+
+
+- Once you have the local copy in your desired folder, go back to your terminal and run:
+```
+npm install
+```
+This command installs all the dependencies of the application.
