@@ -66,7 +66,7 @@ const MintHero = () => {
               const metadata = await client.store({
                 name,
                 description: "Mage Warrior",
-                image: new File(['./assets/question.png'], 'question.png', { type: 'image/jpg' })
+                image: new File(['./assets/dude.jpeg'], 'dude.jpeg', { type: 'image/jpg' })
               });
 
               setStatus(`Minting token with metadata URI: ${metadata.url}`);
@@ -147,13 +147,7 @@ const MintHero = () => {
 
       </div>
     <div className="mint">
-    <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
-    
-        {/* {{status} === ("Fresh Mage minted successfully! Reveal your Mage with the button below to start the game") ? (
-          <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
-        ) : (
-            <p className="py-3">Reveal your NFT here after minting......</p>
-        )} */}
+      <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
     </div>
      
     
