@@ -15,7 +15,7 @@ contract MageToken is ERC721URIStorage, Pausable, Ownable {
 
   uint256 COUNTER;
 
-  uint256 private _price = 500000000000000;
+  uint256 private _price = 1200000000000000;
 
   struct Mage {
     string name;

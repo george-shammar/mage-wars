@@ -58,9 +58,8 @@ const MintHero = () => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(contractAddress.MageToken, MageArtifact.abi, signer);
-   
-      const mintingPrice = 500000000000000;
-
+      const mintingPrice = await contract.getMintingPrice();
+      
             try {
 
               const client = new NFTStorage({ token: NFT_STORAGE_KEY });
