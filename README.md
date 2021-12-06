@@ -135,6 +135,18 @@ To use the application, open http://localhost:3000/ or use the command below in 
 - You feature on the Leader Board if your total score is in the first 10 highest scores.
 - The scoring system is such that the total score from the first scene(World Scene) is bookmarked and used later on the Leader Board. Otherwise, if the battle is lost, the player's score would be zero with nothing to record on the Leaderboard.
 
+## Game Controls
+
+### World Scene
+- Jump: Up Keyboard Key.
+- Forward: Right Keybaord Key.
+- Backward: Left Keyboard Key.
+
+### Battle Scene
+- Select Dragon to Attack: Left Keyboard Key.
+- To change selection up or down: Up and Down Keyboard Key.
+- To confirm selected dragon to attack and initiate attack: Space bar.
+
 
 ## Developer
 
