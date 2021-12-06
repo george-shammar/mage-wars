@@ -43,3 +43,13 @@ The smartcontract is deployed to the ### Polygon Mumbai network
 
 #### Battle Scene
 ![screenshot](./battle.png)
+
+## Getting Started
+
+To run a local copy of this application, follow the steps below:
+
+- Go to the "Code" section of this repository and press the green button that says "Code". Copy the URL or the SSH key.
+- Go to the terminal and enter:
+```
+https://github.com/george-shammar/mage-wars.git
+```
