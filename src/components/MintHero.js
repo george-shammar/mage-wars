@@ -51,7 +51,9 @@ const MintHero = () => {
 
     async function mintMage() {
       const {name} = formInput;
-      if (!name) return
+      if (!name) {
+        setStatus("Name your Mage");
+      }
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
@@ -147,7 +149,7 @@ const MintHero = () => {
 
       </div>
     <div className="mint">
-      <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Hero</button></Link>
+      <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Mage</button></Link>
     </div>
      
     
