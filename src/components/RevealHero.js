@@ -9,8 +9,11 @@ import MageArtifact from "../contracts/MageToken.json";
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 const RevealHero = () => {
-    const [status, setStatus] = useState("Not yet loaded");
     const [name, setName] = useState([])
+    const [id, setID] = useState([])
+    const [dna, setDNA] = useState([])
+    const [rarity, setRarity] = useState([])
+    const [level, setLevel] = useState([])
 
       useEffect(() => {
         loadNFTs()
@@ -31,16 +34,20 @@ const RevealHero = () => {
         const mageDNA = mage.dna.toString();
         const mageRarity = mage.rarity.toString();
         const mageLevel = mage.level
-        console.log(mageLevel)
         setName(mageName)
+        setID(mageID)
+        setDNA(mageDNA)
+        setRarity(mageRarity)
+        setLevel(mageLevel)
   
       }
 
     return (
         <div className="overall butt">
-          <p className="white">Your Mage: {name}, is ready to fight</p>
+          
             <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
                 <h1 className="pink azania py-2">Your Minted Mage</h1>
+                <p className="white center">Your Mage: {name}, is ready to fight</p>
             </div>
             <div className="mint">
                 <div className="border card rounded shadow-lg mt-3">
@@ -49,10 +56,10 @@ const RevealHero = () => {
                 <div className="border">
                     <p className="white">Name: {name}</p>
                     <div className="white mt-3">
-                    {/* <p>ID: {nfts.id}</p> */}
-                    {/* <p>DNA: {nfts.dna}</p>
-                    <p>Rarity: {nfts.rarity}</p> */}
-                    {/* <p>Level: {nfts.level}</p> */}
+                    <p>ID: {id}</p>
+                    <p>DNA: {dna}</p>
+                    <p>Rarity: {rarity}</p>
+                    <p>Level: {level}</p>
                     <p>Description/Powers: Mage, Max Velocity: 24m/h, Max Jump: 300cm</p>
                     </div>
                 </div>
