@@ -104,8 +104,8 @@ To use the application, open http://localhost:3000/ or use the command below in 
 - Click on the "Reveal Mage" button to see your Mage.
 
 # The Game
-
-
+- The repository for the game is here:
+[Game Repository](https://github.com/george-shammar/Legend_of_the_Seeker)
 
 
 
