@@ -21,7 +21,7 @@ const client = new NFTStorage({ token: NFT_STORAGE_KEY });
 ```
 The smartcontract is deployed to the ### Polygon Mumbai network
 
-# Built With
+## Built With
 - Solidity
 - React
 - JavaScript
@@ -32,3 +32,6 @@ The smartcontract is deployed to the ### Polygon Mumbai network
 - Alchemy
 - HTML5
 - CSS3
+
+## Screenshots
+
