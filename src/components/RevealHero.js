@@ -9,48 +9,12 @@ import MageArtifact from "../contracts/MageToken.json";
 const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 const RevealHero = () => {
-    const [walletAddress, setWallet] = useState("");
     const [status, setStatus] = useState("Not yet loaded");
-    const [nfts, setNfts] = useState([])
+    const [name, setName] = useState([])
 
       useEffect(() => {
         loadNFTs()
       }, [])
-
-
-    // useEffect(() => {
-    //     (async() => {
-    //       const {address} = await getCurrentWalletConnected();
-    //       setWallet(address)
-      
-    //       addWalletListener();
-          
-    //     }) ()
-    //   }, []);
-  
-      // connect wallet 
-    //   const connectWalletPressed = async () => {
-    //       const walletResponse = await connectWallet();
-    //       setWallet(walletResponse.address);
-    //   };
-  
-      // wallet listener to update UI when wallet's state changes, 
-      // such as when the user disconnects or switches accounts.
-      function addWalletListener() {
-          if (window.ethereum) {
-          window.ethereum.on("accountsChanged", (accounts) => {
-              if (accounts.length > 0) {
-              setWallet(accounts[0]);
-            
-              } else {
-              setWallet("");
-              }
-          });
-          } 
-      }
-
-    
-
 
       async function loadNFTs() {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -62,32 +26,19 @@ const RevealHero = () => {
 
         const data = await contract.getOwnerMages(account);
         let mage = data[data.length-1];
-
-        setNfts(mage)
-        setStatus(`Your Mage: ${nfts.name} is ready to defeat the Dragon`)
-
+        const mageName = mage.name;
+        const mageID = mage.id.toString();
+        const mageDNA = mage.dna.toString();
+        const mageRarity = mage.rarity.toString();
+        const mageLevel = mage.level
+        console.log(mageLevel)
+        setName(mageName)
+  
       }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     return (
         <div className="overall butt">
+          <p className="white">Your Mage: {name}, is ready to fight</p>
             <div className="d-flex main flex-column justify-content-between align-text-center pt-2 px-4">
                 <h1 className="pink azania py-2">Your Minted Mage</h1>
             </div>
@@ -96,12 +47,12 @@ const RevealHero = () => {
                     <img alt="logo" src={mage} />
                 </div>
                 <div className="border">
-                    <p className="white">Name: Thorra</p>
+                    <p className="white">Name: {name}</p>
                     <div className="white mt-3">
-                    <p>ID: 24</p>
-                    <p>DNA: 68756756857788775</p>
-                    <p>Rarity: Original</p>
-                    <p>Level: 3</p>
+                    {/* <p>ID: {nfts.id}</p> */}
+                    {/* <p>DNA: {nfts.dna}</p>
+                    <p>Rarity: {nfts.rarity}</p> */}
+                    {/* <p>Level: {nfts.level}</p> */}
                     <p>Description/Powers: Mage, Max Velocity: 24m/h, Max Jump: 300cm</p>
                     </div>
                 </div>
