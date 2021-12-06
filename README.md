@@ -103,7 +103,7 @@ To use the application, open http://localhost:3000/ or use the command below in 
 - Once you've succeefully minted a Mage, confirm your minted asset through any of the available means. Check out the transaction on etherscan.
 - Click on the "Reveal Mage" button to see your Mage.
 
-
+# The Game
 
 
 
