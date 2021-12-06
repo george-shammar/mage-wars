@@ -100,7 +100,7 @@ const MintHero = () => {
       return <NoWallet />;
     }
 
-
+    const confirmedStatus =  "Fresh Mage minted successfully! Reveal your Mage with the button below to start the game";
 
     return (
       <div className="overall butt">
@@ -121,7 +121,7 @@ const MintHero = () => {
       </div>
       <p className="white py-2 status">
           {status}
-        </p>
+      </p>
 
     <div className="mint">
       <div className="border card rounded shadow-lg mt-3">
@@ -149,7 +149,11 @@ const MintHero = () => {
 
       </div>
     <div className="mint">
+    {status ===  confirmedStatus ? (
       <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Mage</button></Link>
+    ) : (
+      <p className="white py-3">Reveal your Mage here after confirmation... </p>
+    )}
     </div>
      
     
