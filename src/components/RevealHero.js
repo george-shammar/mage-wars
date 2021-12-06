@@ -124,13 +124,13 @@ const RevealHero = () => {
                     <img alt="logo" src={mage} />
                 </div>
                 <div className="border">
-                    <p>Name</p>
+                    <p className="white">Name: Thorra</p>
                     <div className="white mt-3">
-                    <p>ID: To be revealed</p>
-                    <p>DNA: To be revealed</p>
-                    <p>Rarity: To be revealed</p>
-                    <p>Level: To be revealed</p>
-                    <p>Description/Powers: To be reveealed</p>
+                    <p>ID: 24</p>
+                    <p>DNA: 68756756857788775</p>
+                    <p>Rarity: Original</p>
+                    <p>Level: 3</p>
+                    <p>Description/Powers: Mage, Max Velocity: 24m/h, Max Jump: 300cm</p>
                     </div>
                 </div>
             </div>
