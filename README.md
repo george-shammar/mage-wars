@@ -11,3 +11,12 @@
 
 ##### Minted NFTs are stored on IPFS for hot storage and Filecoin for cold storage using the nft.storage library. Example code snippet below:
 
+```
+const client = new NFTStorage({ token: NFT_STORAGE_KEY });
+  setStatus("Uploading to nft.storage...")
+  const metadata = await client.store({
+    name,
+    description: "Some texts",
+    image: new File(['./assets/example.png'], 'question.png', { type: 'image/jpg' })
+  });
+```
