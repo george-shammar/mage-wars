@@ -149,7 +149,7 @@ const MintHero = () => {
     {status ===  confirmedStatus ? (
       <Link to="/RevealHero"><button className="white rounded my-5 py-2 submit white">Reveal Mage</button></Link>
     ) : (
-      <p className="white py-3">Reveal your Mage here after confirmation... </p>
+      <p className="pink py-3">Reveal your Mage here after confirmation... </p>
     )}
     </div>
     </div>
