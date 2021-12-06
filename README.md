@@ -89,3 +89,9 @@ To use the application, open http://localhost:3000/ or use the command below in 
 - Import an account from the hardhat node in your terminal and copy the given private key in the section of Metamask that says 'import an account' and paste the copied private key from your terminal in the space where it says: 'Paste your private key string here:'. Click on 'Import'.
 
 - You might also need to configure MetaMask to work well with Hardhat. To do that, go to Settings -> Networks -> Localhost 8545 and change the Chain ID input to 31337.
+
+## Usage
+
+- Upon launching the application, connect to your metamask wallet by choosing an address to connect with.
+- Fill in the minting form on the page with the name you wish to call your Mage. Confirm your minting and sign off the transaction on metamask by paying the gas fee as well as the price.
+- Once you've succeefully minted a Mage, confirm your minted asset through any of the available means. Check out the transaction on etherscan.
