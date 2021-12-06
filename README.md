@@ -96,3 +96,31 @@ To use the application, open http://localhost:3000/ or use the command below in 
 - Fill in the minting form on the page with the name you wish to call your Mage. Confirm your minting and sign off the transaction on metamask by paying the gas fee as well as the price.
 - Once you've succeefully minted a Mage, confirm your minted asset through any of the available means. Check out the transaction on etherscan.
 - Click on the "Reveal Mage" button to see your Mage.
+
+
+
+
+
+
+
+
+## Developer
+
+👤 **George Gbenle**
+
+- GitHub: [george-shammar](https://github.com/george-shammar)
+- Twitter: [@GeorgeShammar](https://twitter.com/GeorgeShammar)
+- LinkedIn: [George Gbenle](https://www.linkedin.com/in/georgegbenle/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project is MIT licensed.
