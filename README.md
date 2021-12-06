@@ -107,7 +107,33 @@ To use the application, open http://localhost:3000/ or use the command below in 
 - The repository for the game is here:
 [Game Repository](https://github.com/george-shammar/Legend_of_the_Seeker)
 
+## Game Overview
+- There are two game scenes apart from the other scenes that enhances usability like Options Scene, Credit Scenes e.t.c
+- The two scenes are the World Scene (Or Game Scene) and the Battle Scene.
+- The player moves from the World Scene to the Battle Scene and then the game is over either with a victory or a defeat.
+- The game can be replayed as many times as possible.
+- Use the Options menu to customize your game experience. E.g By enabling and disabling the sounds.
+- You can also view how you rank on the Leader Board.
 
+## Game Objectives
+
+### World Scene
+- Your primary objective is to win with as much points as possible so as to feature on the Leader Board.
+- At the World Scene (The first scene), you are expected to gather as much fruits (points) as possible. Each fruit gathered is 100 points.
+- While gathering the fruits (points), you must not get touched by the bouncing spike balls, else you enter the Battle Scene to fight the Dragons immediately.
+- At the World Scene, the difficulty level increases with the number of fruits you have gathered. The number of spike balls you have to avoid is incremented with increasing points you have gathered.
+- Eventually, you'll get touched by the spike balls and then you'll move to the Battle Scene - TO FIGHT.
+
+### Battle Scene
+- In this scene, you have to defeat two dragons while making sure you don't loose much points.
+- Each time you get hit by a dragon, you loose 300 points.
+- Each time you hit a dragon, you gain 100 points. There is a point deficit of 200 points. So, the longer you remain in the Battle Scene, the more likely it is for you to exhaust all the points you have gathered from the World Scene.
+- Once your points reach 0, you have lost the Battle and the game is over.
+- Your final score at that point gets registered with your name on the Leader Baord.
+
+### Leader Board
+- You feature on the Leader Board if your total score is in the first 10 highest scores.
+- The scoring system is such that the total score from the first scene(World Scene) is bookmarked and used later on the Leader Board. Otherwise, if the battle is lost, the player's score would be zero with nothing to record on the Leaderboard.
 
 
 ## Developer
