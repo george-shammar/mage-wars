@@ -90,6 +90,33 @@ To use the application, open http://localhost:3000/ or use the command below in 
 
 ```npm start
 ```
+##### Note: If you encounter this browser error: 
+```
+Module not found: can't resolve 'ipfs-car/blockstore/memory'
+```
+##### It is understood that nft.storage uses webpack5 while create-react-app uses webpack4, hence the reason for the imcompatibilities in dependencies. Update the module import to correct paths. Follow the steps below to fix it:
+- Go into 
+``` 
+node_modules
+``` 
+and copy
+```
+ipfs-car
+```
+into 
+```
+nft.storage/src
+``` 
+- Go ahead to update the import statements in the respective files as such:
+```
+nft.storage/src/platform.web.js;     Update: import { MemoryBlockStore } from 'ipfs-car/dist/esm/blockstore/memory'
+```
+```
+nft.storage/src/lib.js;     Update: import { pack } from 'ipfs-car/dist/esm/pack'
+```
+```
+nft.storage/src/token.js;     Update: import { pack } from 'ipfs-car/dist/esm/pack'
+```
 - Set your network in MetaMask to localhost:8545.
 
 - Import an account from the hardhat node in your terminal and copy the given private key in the section of Metamask that says 'import an account' and paste the copied private key from your terminal in the space where it says: 'Paste your private key string here:'. Click on 'Import'.
