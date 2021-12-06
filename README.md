@@ -7,7 +7,10 @@
 - Level: Initial level is set to 1.
 - Description: The forward and backward velocity as well as maximum jump height.
 
-#### Tech Stack
+## Video Demo
+[Watch Here](hhttps://www.loom.com/share/6d36bfb0b91c47d7947eea6a565a910b/)
+
+## Tech Stack
 
 ##### Minted NFTs are stored on IPFS for hot storage and Filecoin for cold storage using the nft.storage library. Example code snippet below:
 
