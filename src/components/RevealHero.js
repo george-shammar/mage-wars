@@ -2,11 +2,8 @@ import "../styles/RevealHero.css"
 import mage from "../assets/dude.jpeg";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import { connectWallet, getCurrentWalletConnected } from "../utils/wallet";
 import contractAddress from "../contracts/contract-address.json";
 import MageArtifact from "../contracts/MageToken.json";
-
-const ERROR_CODE_TX_REJECTED_BY_USER = 4001;
 
 const RevealHero = () => {
     const [name, setName] = useState([])
