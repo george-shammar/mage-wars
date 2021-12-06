@@ -64,9 +64,23 @@ cd directory
 ```
 Directory is the name of your folder.
 
-
 - Once you have the local copy in your desired folder, go back to your terminal and run:
 ```
 npm install
 ```
 This command installs all the dependencies of the application.
+
+Next, run Hardhat's testing network in the CLI:
+```
+npx hardhat node
+```
+Then, on a new terminal, go to the repository's root folder and run this to deploy your contract:
+
+```
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+To use the application, open http://localhost:3000/ or use the command below in your terminal:
+
+```npm start
+```
