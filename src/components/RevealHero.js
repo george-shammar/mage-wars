@@ -47,7 +47,7 @@ const RevealHero = () => {
                 <p className="white center">Your Mage: {name}, is ready to fight</p>
             </div>
             <div className="mint">
-                <div className="border card rounded shadow-lg mt-3">
+                <div className="border card mage-heigth rounded shadow-lg mt-3">
                     <img alt="logo" src={mage} />
                 </div>
                 <div className="border">
