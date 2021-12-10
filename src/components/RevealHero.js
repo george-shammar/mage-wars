@@ -55,8 +55,7 @@ const RevealHero = () => {
                     <div className="white mt-3">
                     <p>ID: {id}</p>
                     <p>DNA: {dna}</p>
-                    <p>Level: {level}</p>
-                    <di>
+                    <div>
                         {rarity <= 80 ? (
                             <p>Rarity: Original Mage</p>
                         ) : (
@@ -69,8 +68,8 @@ const RevealHero = () => {
                             <p></p>
                         )}
                         
-                    </di>
-                    
+                    </div>
+                    <p>Level: {level}</p>
                     <p>Description: Velocity: 200m/h, Gravity: 300</p>
                     </div>
                 </div>
