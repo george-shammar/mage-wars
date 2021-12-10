@@ -56,7 +56,21 @@ const RevealHero = () => {
                     <p>ID: {id}</p>
                     <p>DNA: {dna}</p>
                     <p>Rarity: {rarity}</p>
-                    <p>Level: {level}</p>
+                    <di>
+                        {level <= 80 ? (
+                            <p>Level: Original Mage</p>
+                        ) : (
+                            <p>Level: Rare Mage</p>
+                        )}
+                       
+                        {level > 95 ? (
+                            <p>Level: Super Rare Mage</p>
+                        ) : (
+                            <p></p>
+                        )}
+                        
+                    </di>
+                    
                     <p>Description/Powers: Mage, Max Velocity: 24m/h, Max Jump: 300cm</p>
                     </div>
                 </div>
