@@ -57,15 +57,9 @@ const RevealHero = () => {
                     <p>DNA: {dna}</p>
                     <div>
                         {rarity <= 80 ? (
-                            <p>Rarity: Original Mage</p>
-                        ) : (
                             <p>Rarity: Rare Mage</p>
-                        )}
-                       
-                        {rarity > 95 ? (
-                            <p>Rarity: Super Rare Mage</p>
                         ) : (
-                            <p></p>
+                            <p>Rarity: Super Rare Mage</p>
                         )}
                         
                     </div>
